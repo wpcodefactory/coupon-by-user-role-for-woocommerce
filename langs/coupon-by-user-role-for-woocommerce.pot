@@ -1,0 +1,213 @@
+#: includes/class-alg-wc-coupon-by-user-role-core.php:112
+msgid "Select all"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:113
+msgid "Deselect all"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:179
+#: includes/pro/class-alg-wc-coupon-by-user-role-pro.php:41
+msgid "Guest"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:180
+msgid "Administrator"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:181
+msgid "Editor"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:182
+msgid "Author"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:183
+msgid "Contributor"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:184
+msgid "Subscriber"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:185
+msgid "Customer"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:186
+msgid "Shop manager"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role-core.php:261
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:145
+msgid "Coupon is not valid for your user role."
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role.php:131
+msgid "Settings"
+msgstr ""
+
+#: includes/class-alg-wc-coupon-by-user-role.php:134
+msgid "Go Pro"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:25
+msgid "Amounts"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:42
+msgid "Coupon Amount by User Role"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:47
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-amounts.php:27
+msgid "Amount by user role"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:48
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:48
+msgid "Enable section"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:61
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:113
+msgid "Per Coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:66
+msgid "Amount per coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:67
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:119
+msgid "Enable"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-amounts.php:68
+msgid ""
+"This will add \"Amount by user role\" tab to each coupon's admin edit page."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:25
+msgid "Availability"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:42
+msgid "Coupon Availability by User Role"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:47
+msgid "Availability by user role"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:61
+msgid "All Coupons"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:66
+msgid "Disable all coupons for selected user roles"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:67
+msgid ""
+"This will disable all coupons for selected user roles. Coupons will be "
+"disabled completely, including coupon code input field on the cart and "
+"checkout pages."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:76
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:96
+msgid "Exceptions."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:77
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:97
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-invalidate.php:71
+msgid "This is useful if user can have multiple roles at once on your site."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:86
+msgid "Invalidate all coupons for selected user roles"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:87
+msgid ""
+"This will invalidate all coupons for selected user roles. Coupon code input "
+"field will still be available on the cart and checkout pages."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:118
+msgid "Invalidate per coupon"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:120
+msgid ""
+"This will add \"Invalidate by user role\" tab to each coupon's admin edit "
+"page."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:133
+msgid "Message"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:138
+msgid "\"Coupon is not valid\" message"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:139
+msgid "Message that will be displayed for invalid coupons by user role."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-availability.php:140
+#, php-format
+msgid "Available placeholders: %s."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-amounts.php:51
+msgid "Can be zero."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-amounts.php:52
+msgid "Ignored if empty."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-invalidate.php:25
+msgid "Invalidate by user role"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-invalidate.php:54
+msgid "Invalidate for roles"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-invalidate.php:61
+msgid "Invalidate coupon for selected user roles."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon-invalidate.php:64
+msgid "Exceptions"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings.php:25
+msgid "Coupon by User Role"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings.php:58
+msgid "Reset Settings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings.php:63
+msgid "Reset section settings"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings.php:64
+msgid "Reset"
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings.php:65
+msgid "Check the box and save changes to reset."
+msgstr ""
+
+#: includes/settings/class-alg-wc-cbur-settings.php:105
+msgid "Your settings have been reset."
+msgstr ""
