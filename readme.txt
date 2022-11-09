@@ -1,8 +1,8 @@
 === Coupon by User Role for WooCommerce ===
-Contributors: algoritmika, anbinder
+Contributors: wpcodefactory, algoritmika, anbinder
 Tags: woocommerce, coupon, user role, woo commerce
 Requires at least: 4.4
-Tested up to: 5.9
+Tested up to: 6.1
 Stable tag: 2.0.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -42,6 +42,12 @@ Free plugin version includes "standard" user roles only: Guest, Administrator, E
 3. Start by visiting plugin settings at "WooCommerce > Settings > Coupon by User Role".
 
 == Changelog ==
+
+= 2.0.2 - 09/11/2022 =
+* WC tested up to: 7.1.
+* Tested up to: 6.1.
+* Readme.txt updated.
+* Deploy script added.
 
 = 2.0.1 - 13/04/2022 =
 * Tested up to: 5.9.
