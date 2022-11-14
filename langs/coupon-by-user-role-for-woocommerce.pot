@@ -1,39 +1,3 @@
-# Copyright (C) 2022 WPFactory
-# This file is distributed under the same license as the Coupon by User Role for WooCommerce Pro plugin.
-msgid ""
-msgstr ""
-"Project-Id-Version: coupon-by-user-role-for-woocommerce 2.0.2-dev\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/coupon-by-user-role-for-woocommerce\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-09T19:28:10+01:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
-"X-Domain: coupon-by-user-role-for-woocommerce\n"
-
-#. Plugin Name of the plugin
-msgid "Coupon by User Role for WooCommerce Pro"
-msgstr ""
-
-#. Plugin URI of the plugin
-msgid "https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/"
-msgstr ""
-
-#. Description of the plugin
-msgid "WooCommerce coupons by user roles."
-msgstr ""
-
-#. Author of the plugin
-msgid "WPFactory"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "https://wpfactory.com"
-msgstr ""
-
 #: includes/class-alg-wc-coupon-by-user-role-core.php:112
 msgid "Select all"
 msgstr ""
@@ -80,6 +44,10 @@ msgstr ""
 msgid "Coupon is not valid for your user role."
 msgstr ""
 
+#: includes/class-alg-wc-coupon-by-user-role.php:131
+msgid "Settings"
+msgstr ""
+
 #: includes/class-alg-wc-coupon-by-user-role.php:134
 msgid "Go Pro"
 msgstr ""
@@ -117,7 +85,8 @@ msgid "Enable"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-amounts.php:68
-msgid "This will add \"Amount by user role\" tab to each coupon's admin edit page."
+msgid ""
+"This will add \"Amount by user role\" tab to each coupon's admin edit page."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:25
@@ -141,7 +110,10 @@ msgid "Disable all coupons for selected user roles"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:67
-msgid "This will disable all coupons for selected user roles. Coupons will be disabled completely, including coupon code input field on the cart and checkout pages."
+msgid ""
+"This will disable all coupons for selected user roles. Coupons will be "
+"disabled completely, including coupon code input field on the cart and "
+"checkout pages."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:76
@@ -160,7 +132,9 @@ msgid "Invalidate all coupons for selected user roles"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:87
-msgid "This will invalidate all coupons for selected user roles. Coupon code input field will still be available on the cart and checkout pages."
+msgid ""
+"This will invalidate all coupons for selected user roles. Coupon code input "
+"field will still be available on the cart and checkout pages."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:118
@@ -168,7 +142,9 @@ msgid "Invalidate per coupon"
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:120
-msgid "This will add \"Invalidate by user role\" tab to each coupon's admin edit page."
+msgid ""
+"This will add \"Invalidate by user role\" tab to each coupon's admin edit "
+"page."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:133
@@ -184,6 +160,7 @@ msgid "Message that will be displayed for invalid coupons by user role."
 msgstr ""
 
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:140
+#, php-format
 msgid "Available placeholders: %s."
 msgstr ""
 
