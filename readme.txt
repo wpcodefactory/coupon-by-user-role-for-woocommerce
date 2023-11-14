@@ -47,7 +47,7 @@ Free plugin version includes "standard" user roles only: Guest, Administrator, E
 
 == Changelog ==
 
-= 2.1.0 - 14/11/2022 =
+= 2.1.0 - 14/11/2023 =
 * Dev – "High-Performance Order Storage (HPOS)" compatibility.
 * Dev - Code refactoring.
 * WC tested up to: 8.2.
