@@ -32,8 +32,8 @@ class Alg_WC_CBUR_Settings_Amounts extends Alg_WC_CBUR_Settings_Section {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) "Amount" (i.e. globally, not per-coupon)
-	 * @todo    [maybe] (dev) rename `alg_wc_coupon_by_user_role_amount_per_coupon` to `alg_wc_cbur_amount_per_coupon`?
+	 * @todo    (feature) "Amount" (i.e., globally, not per-coupon)
+	 * @todo    (dev) rename `alg_wc_coupon_by_user_role_amount_per_coupon` to `alg_wc_cbur_amount_per_coupon`?
 	 */
 	function get_settings() {
 

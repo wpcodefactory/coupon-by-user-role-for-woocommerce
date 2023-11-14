@@ -20,7 +20,7 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Amounts extends Alg_WC_CBUR_Settings_Per_C
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (dev) rename `alg-wc-coupon-by-user-role-amounts` to `alg-wc-cbur-amounts` (same in `invalidate`)?
+	 * @todo    (dev) rename `alg-wc-coupon-by-user-role-amounts` to `alg-wc-cbur-amounts` (same in `invalidate`)?
 	 */
 	function __construct() {
 		$this->id    = 'alg_wc_coupon_by_user_role_amounts';
@@ -35,8 +35,8 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Amounts extends Alg_WC_CBUR_Settings_Per_C
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) add option to reduce the number of roles
-	 * @todo    [maybe] (dev) rename `alg_wc_coupon_by_user_role_amount` to `alg_wc_cbur_amount`?
+	 * @todo    (feature) add option to reduce the number of roles
+	 * @todo    (dev) rename `alg_wc_coupon_by_user_role_amount` to `alg_wc_cbur_amount`?
 	 */
 	function get_options() {
 		$options = array();

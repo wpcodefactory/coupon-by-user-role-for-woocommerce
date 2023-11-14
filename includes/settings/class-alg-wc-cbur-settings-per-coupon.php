@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Per Coupon Settings
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.1.0
  *
  * @author  Algoritmika Ltd.
@@ -13,6 +13,27 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! class_exists( 'Alg_WC_CBUR_Settings_Per_Coupon' ) ) :
 
 class Alg_WC_CBUR_Settings_Per_Coupon {
+
+	/**
+	 * id.
+	 *
+	 * @since 2.1.0
+	 */
+	public $id;
+
+	/**
+	 * title.
+	 *
+	 * @since 2.1.0
+	 */
+	public $title;
+
+	/**
+	 * icon.
+	 *
+	 * @since 2.1.0
+	 */
+	public $icon;
 
 	/**
 	 * Constructor.
@@ -46,7 +67,7 @@ class Alg_WC_CBUR_Settings_Per_Coupon {
 	 *
 	 * @see     https://rawgit.com/woothemes/woocommerce-icons/master/demo.html
 	 *
-	 * @todo    [next] (dev) better icons?
+	 * @todo    (dev) better icons?
 	 */
 	function icon_css( $tabs ) {
 		if ( $this->is_coupon_admin_add_edit_page() ) {
@@ -80,9 +101,9 @@ class Alg_WC_CBUR_Settings_Per_Coupon {
 	 * @see     https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L344
 	 * @see     https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/wc-meta-box-functions.php
 	 *
-	 * @todo    [next] `woocommerce_wp_text_input()`: `placeholder`, `description`, `desc_tip`
-	 * @todo    [next] `woocommerce_wp_select()`: select all: better design?
-	 * @todo    [next] Pro msg: better styling?
+	 * @todo    (dev) `woocommerce_wp_text_input()`: `placeholder`, `description`, `desc_tip`
+	 * @todo    (dev) `woocommerce_wp_select()`: select all: better design?
+	 * @todo    (dev) Pro msg: better styling?
 	 */
 	function add_options( $coupon_id, $coupon ) {
 		echo '<div id="' . $this->id . '_coupon_data" class="panel woocommerce_options_panel">' . '<div class="options_group">';

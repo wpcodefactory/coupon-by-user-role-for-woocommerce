@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Section Settings
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -13,6 +13,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 if ( ! class_exists( 'Alg_WC_CBUR_Settings_Section' ) ) :
 
 class Alg_WC_CBUR_Settings_Section {
+
+	/**
+	 * id.
+	 *
+	 * @since 2.1.0
+	 */
+	public $id;
+
+	/**
+	 * desc.
+	 *
+	 * @since 2.1.0
+	 */
+	public $desc;
 
 	/**
 	 * Constructor.

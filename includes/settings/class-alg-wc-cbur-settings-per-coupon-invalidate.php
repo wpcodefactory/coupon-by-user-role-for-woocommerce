@@ -46,7 +46,7 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Invalidate extends Alg_WC_CBUR_Settings_Pe
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (dev) `wc_help_tip`: better design?
+	 * @todo    (dev) `wc_help_tip`: better design?
 	 */
 	function get_options() {
 		return array(

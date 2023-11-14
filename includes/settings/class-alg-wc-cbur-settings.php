@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Settings
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -97,12 +97,12 @@ class Alg_WC_CBUR_Settings extends WC_Settings_Page {
 	/**
 	 * admin_notice_settings_reset.
 	 *
-	 * @version 1.1.0
+	 * @version 2.1.0
 	 * @since   1.1.0
 	 */
 	function admin_notice_settings_reset() {
 		echo '<div class="notice notice-warning is-dismissible"><p><strong>' .
-			__( 'Your settings have been reset.', 'coupon-by-user-role-for-woocommerce' ) . '</strong></p></div>';
+			esc_html__( 'Your settings have been reset.', 'coupon-by-user-role-for-woocommerce' ) . '</strong></p></div>';
 	}
 
 	/**

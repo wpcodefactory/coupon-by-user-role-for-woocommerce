@@ -3,12 +3,12 @@
 Plugin Name: Coupon by User Role for WooCommerce
 Plugin URI: https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/
 Description: WooCommerce coupons by user roles.
-Version: 2.0.4
+Version: 2.1.0
 Author: WPFactory
 Author URI: https://wpfactory.com
 Text Domain: coupon-by-user-role-for-woocommerce
 Domain Path: /langs
-WC tested up to: 8.1
+WC tested up to: 8.2
 */
 
 defined( 'ABSPATH' ) || exit;
@@ -17,7 +17,7 @@ if ( 'coupon-by-user-role-for-woocommerce.php' === basename( __FILE__ ) ) {
 	/**
 	 * Check if Pro plugin version is activated.
 	 *
-	 * @version 1.4.0
+	 * @version 2.1.0
 	 * @since   1.4.0
 	 */
 	$plugin = 'coupon-by-user-role-for-woocommerce-pro/coupon-by-user-role-for-woocommerce-pro.php';
@@ -25,11 +25,12 @@ if ( 'coupon-by-user-role-for-woocommerce.php' === basename( __FILE__ ) ) {
 		in_array( $plugin, (array) get_option( 'active_plugins', array() ), true ) ||
 		( is_multisite() && array_key_exists( $plugin, (array) get_site_option( 'active_sitewide_plugins', array() ) ) )
 	) {
+		defined( 'ALG_WC_COUPON_BY_USER_ROLE_FILE_FREE' ) || define( 'ALG_WC_COUPON_BY_USER_ROLE_FILE_FREE', __FILE__ );
 		return;
 	}
 }
 
-defined( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION' ) || define( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION', '2.0.4' );
+defined( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION' ) || define( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION', '2.1.0' );
 
 defined( 'ALG_WC_COUPON_BY_USER_ROLE_FILE' ) || define( 'ALG_WC_COUPON_BY_USER_ROLE_FILE', __FILE__ );
 

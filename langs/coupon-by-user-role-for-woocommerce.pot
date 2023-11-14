@@ -1,54 +1,54 @@
-#: includes/class-alg-wc-coupon-by-user-role-core.php:112
+#: includes/class-alg-wc-coupon-by-user-role-core.php:119
 msgid "Select all"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:113
+#: includes/class-alg-wc-coupon-by-user-role-core.php:120
 msgid "Deselect all"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:179
+#: includes/class-alg-wc-coupon-by-user-role-core.php:186
 #: includes/pro/class-alg-wc-coupon-by-user-role-pro.php:41
 msgid "Guest"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:180
+#: includes/class-alg-wc-coupon-by-user-role-core.php:187
 msgid "Administrator"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:181
+#: includes/class-alg-wc-coupon-by-user-role-core.php:188
 msgid "Editor"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:182
+#: includes/class-alg-wc-coupon-by-user-role-core.php:189
 msgid "Author"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:183
+#: includes/class-alg-wc-coupon-by-user-role-core.php:190
 msgid "Contributor"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:184
+#: includes/class-alg-wc-coupon-by-user-role-core.php:191
 msgid "Subscriber"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:185
+#: includes/class-alg-wc-coupon-by-user-role-core.php:192
 msgid "Customer"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:186
+#: includes/class-alg-wc-coupon-by-user-role-core.php:193
 msgid "Shop manager"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:261
+#: includes/class-alg-wc-coupon-by-user-role-core.php:268
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:145
 msgid "Coupon is not valid for your user role."
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role.php:131
+#: includes/class-alg-wc-coupon-by-user-role.php:160
 msgid "Settings"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role.php:134
+#: includes/class-alg-wc-coupon-by-user-role.php:163
 msgid "Go Pro"
 msgstr ""
 

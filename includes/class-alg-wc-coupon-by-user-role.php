@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Main Class
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -21,6 +21,13 @@ final class Alg_WC_Coupon_by_User_Role {
 	 * @since 1.0.0
 	 */
 	public $version = ALG_WC_COUPON_BY_USER_ROLE_VERSION;
+
+	/**
+	 * core.
+	 *
+	 * @since 2.1.0
+	 */
+	public $core;
 
 	/**
 	 * @var   Alg_WC_Coupon_by_User_Role The single instance of the class
@@ -49,12 +56,12 @@ final class Alg_WC_Coupon_by_User_Role {
 	/**
 	 * Alg_WC_Coupon_by_User_Role Constructor.
 	 *
-	 * @version 1.4.0
+	 * @version 2.1.0
 	 * @since   1.0.0
 	 *
 	 * @access  public
 	 *
-	 * @todo    [next] (dev) rename file and class (`cbur`)?
+	 * @todo    (dev) rename file and class (`cbur`)?
 	 */
 	function __construct() {
 
@@ -65,6 +72,9 @@ final class Alg_WC_Coupon_by_User_Role {
 
 		// Set up localisation
 		add_action( 'init', array( $this, 'localize' ) );
+
+		// Declare compatibility with custom order tables for WooCommerce
+		add_action( 'before_woocommerce_init', array( $this, 'wc_declare_compatibility' ) );
 
 		// Pro
 		if ( 'coupon-by-user-role-for-woocommerce-pro.php' === basename( ALG_WC_COUPON_BY_USER_ROLE_FILE ) ) {
@@ -88,6 +98,25 @@ final class Alg_WC_Coupon_by_User_Role {
 	 */
 	function localize() {
 		load_plugin_textdomain( 'coupon-by-user-role-for-woocommerce', false, dirname( plugin_basename( ALG_WC_COUPON_BY_USER_ROLE_FILE ) ) . '/langs/' );
+	}
+
+	/**
+	 * wc_declare_compatibility.
+	 *
+	 * @version 2.1.0
+	 * @since   2.1.0
+	 *
+	 * @see     https://github.com/woocommerce/woocommerce/wiki/High-Performance-Order-Storage-Upgrade-Recipe-Book#declaring-extension-incompatibility
+	 */
+	function wc_declare_compatibility() {
+		if ( class_exists( '\Automattic\WooCommerce\Utilities\FeaturesUtil' ) ) {
+			$files = ( defined( 'ALG_WC_COUPON_BY_USER_ROLE_FILE_FREE' ) ?
+				array( ALG_WC_COUPON_BY_USER_ROLE_FILE, ALG_WC_COUPON_BY_USER_ROLE_FILE_FREE ) :
+				array( ALG_WC_COUPON_BY_USER_ROLE_FILE ) );
+			foreach ( $files as $file ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility( 'custom_order_tables', $file, true );
+			}
+		}
 	}
 
 	/**

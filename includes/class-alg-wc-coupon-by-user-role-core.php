@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Core Class
  *
- * @version 2.0.0
+ * @version 2.1.0
  * @since   1.0.0
  *
  * @author  Algoritmika Ltd.
@@ -15,17 +15,24 @@ if ( ! class_exists( 'Alg_WC_Coupon_by_User_Role_Core' ) ) :
 class Alg_WC_Coupon_by_User_Role_Core {
 
 	/**
+	 * coupon_error_code.
+	 *
+	 * @since 2.1.0
+	 */
+	public $coupon_error_code;
+
+	/**
 	 * Constructor.
 	 *
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (dev) move `require_once( 'settings/class-alg-wc-cbur-settings-per-coupon.php' )` to another class/file
-	 * @todo    [next] (dev) split into e.g. `Alg_WC_CBUR_Availability` and `Alg_WC_CBUR_Amounts`?
-	 * @todo    [next] (dev) rename file and class (`cbur`)?
-	 * @todo    [next] add FAQ and Screenshots sections to readme.txt
-	 * @todo    [maybe] init all options in constructor
-	 * @todo    [maybe] use another error code (instead of `10000`) || maybe add option for customizable code
+	 * @todo    (dev) move `require_once( 'settings/class-alg-wc-cbur-settings-per-coupon.php' )` to another class/file
+	 * @todo    (dev) split into, e.g., `Alg_WC_CBUR_Availability` and `Alg_WC_CBUR_Amounts`?
+	 * @todo    (dev) rename file and class (`cbur`)?
+	 * @todo    (desc) add FAQ and Screenshots sections to readme.txt
+	 * @todo    (dev) init all options in constructor
+	 * @todo    (dev) use another error code (instead of `10000`) || maybe add option for customizable code
 	 */
 	function __construct() {
 		if ( is_admin() ) {
@@ -62,7 +69,7 @@ class Alg_WC_Coupon_by_User_Role_Core {
 	 * @version 2.0.0
 	 * @since   2.0.0
 	 *
-	 * @todo    [next] (feature) `woocommerce_coupon_get_discount_type`
+	 * @todo    (feature) `woocommerce_coupon_get_discount_type`
 	 */
 	function amount_by_user_role( $amount, $coupon ) {
 		$data = get_post_meta( $coupon->get_id(), '_alg_wc_coupon_by_user_role_amount', true );
@@ -82,7 +89,7 @@ class Alg_WC_Coupon_by_User_Role_Core {
 	 * @version 2.0.0
 	 * @since   1.4.0
 	 *
-	 * @todo    [next] (dev) move this to a separate js file
+	 * @todo    (dev) move this to a separate js file
 	 */
 	function add_admin_script( $e ) {
 		?><script>
@@ -172,7 +179,7 @@ class Alg_WC_Coupon_by_User_Role_Core {
 	 * @version 1.3.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [maybe] `super_admin` (Super Admin)
+	 * @todo    (dev) `super_admin` (Super Admin)
 	 */
 	function get_user_roles_options() {
 		return apply_filters( 'alg_wc_cbur_user_roles', array(
@@ -209,8 +216,8 @@ class Alg_WC_Coupon_by_User_Role_Core {
 	 * @version 1.4.0
 	 * @since   1.3.0
 	 *
-	 * @todo    [next] (feature) `array_merge` vs return only `$invalid_user_roles_per_coupon`?
-	 * @todo    [maybe] (dev) rename to e.g. `add_invalid_user_roles_and_exceptions_per_coupon`?
+	 * @todo    (feature) `array_merge` vs return only `$invalid_user_roles_per_coupon`?
+	 * @todo    (dev) rename to, e.g., `add_invalid_user_roles_and_exceptions_per_coupon`?
 	 */
 	function add_invalid_user_roles_per_coupon( $invalid_user_roles, $coupon, $type = '' ) {
 		$key = ( '' === $type ? '_' . 'wpjup_wc_coupon_by_user_role_invalid' : '_' . 'alg_wc_coupon_by_user_role_invalid_exceptions' );
@@ -255,7 +262,7 @@ class Alg_WC_Coupon_by_User_Role_Core {
 	 * @version 1.3.0
 	 * @since   1.3.0
 	 *
-	 * @todo    [maybe] add more placeholders?
+	 * @todo    (dev) add more placeholders?
 	 */
 	function get_coupon_not_valid_message( $coupon ) {
 		$template     = get_option( 'wpjup_wc_coupon_by_user_role_invalid_message', __( 'Coupon is not valid for your user role.', 'coupon-by-user-role-for-woocommerce' ) );

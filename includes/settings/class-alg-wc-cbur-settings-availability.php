@@ -32,8 +32,8 @@ class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    [next] (dev) rearrange settings, e.g. "All Coupons: Disable", "All Coupons: Invalidate"
-	 * @todo    [next] Message: desc: you can use HTML and shortcodes (e.g. `[alg_wc_cbur_translate]`) here
+	 * @todo    (dev) rearrange settings, e.g. "All Coupons: Disable", "All Coupons: Invalidate"
+	 * @todo    (desc) Message: desc: you can use HTML and shortcodes (e.g., `[alg_wc_cbur_translate]`) here
 	 */
 	function get_settings() {
 
