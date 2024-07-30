@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
 Tags: woocommerce, coupon, user role, woo commerce
 Requires at least: 4.4
-Tested up to: 6.4
-Stable tag: 2.1.0
+Tested up to: 6.6
+Stable tag: 2.1.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,10 @@ Free plugin version includes "standard" user roles only: Guest, Administrator, E
 3. Start by visiting plugin settings at "WooCommerce > Settings > Coupon by User Role".
 
 == Changelog ==
+
+= 2.1.1 - 30/07/2024 =
+* WC tested up to: 9.1.
+* Tested up to: 6.6.
 
 = 2.1.0 - 14/11/2023 =
 * Dev – "High-Performance Order Storage (HPOS)" compatibility.
