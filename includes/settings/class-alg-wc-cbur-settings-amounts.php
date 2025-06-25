@@ -8,7 +8,7 @@
  * @author  Algoritmika Ltd.
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CBUR_Settings_Amounts' ) ) :
 
@@ -78,7 +78,11 @@ class Alg_WC_CBUR_Settings_Amounts extends Alg_WC_CBUR_Settings_Section {
 
 		$notes = $this->get_notes();
 
-		return array_merge( $section_settings, $amount_per_coupon_settings, ( ! empty( $notes ) ? $notes : array() ) );
+		return array_merge(
+			$section_settings,
+			$amount_per_coupon_settings,
+			( ! empty( $notes ) ? $notes : array() )
+		);
 	}
 
 }

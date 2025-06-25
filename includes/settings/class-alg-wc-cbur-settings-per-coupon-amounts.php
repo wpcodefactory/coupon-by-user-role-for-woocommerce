@@ -23,10 +23,13 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Amounts extends Alg_WC_CBUR_Settings_Per_C
 	 * @todo    (dev) rename `alg-wc-coupon-by-user-role-amounts` to `alg-wc-cbur-amounts` (same in `invalidate`)?
 	 */
 	function __construct() {
+
 		$this->id    = 'alg_wc_coupon_by_user_role_amounts';
 		$this->title = __( 'Amount by user role', 'coupon-by-user-role-for-woocommerce' );
 		$this->icon  = 'e03a';
+
 		parent::__construct();
+
 	}
 
 	/**
@@ -48,8 +51,10 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Amounts extends Alg_WC_CBUR_Settings_Per_C
 					'key'        => $role,
 					'default'    => '',
 					'type'       => 'text',
-					'desc'       => __( 'Can be zero.', 'coupon-by-user-role-for-woocommerce' ) . ' ' .
-						__( 'Ignored if empty.', 'coupon-by-user-role-for-woocommerce' ),
+					'desc'       => (
+						__( 'Can be zero.', 'coupon-by-user-role-for-woocommerce' ) . ' ' .
+						__( 'Ignored if empty.', 'coupon-by-user-role-for-woocommerce' )
+					),
 				),
 			) );
 		}

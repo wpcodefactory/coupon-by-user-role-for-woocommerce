@@ -8,7 +8,7 @@
  * @author  Algoritmika Ltd.
  */
 
-if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CBUR_Settings_Availability' ) ) :
 
@@ -32,12 +32,12 @@ class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
 	 * @version 2.0.0
 	 * @since   1.0.0
 	 *
-	 * @todo    (dev) rearrange settings, e.g. "All Coupons: Disable", "All Coupons: Invalidate"
+	 * @todo    (dev) rearrange settings, e.g., "All Coupons: Disable", "All Coupons: Invalidate"
 	 * @todo    (desc) Message: desc: you can use HTML and shortcodes (e.g., `[alg_wc_cbur_translate]`) here
 	 */
 	function get_settings() {
 
-		$plugin_settings = array(
+		$section_settings = array(
 			array(
 				'title'    => __( 'Coupon Availability by User Role', 'coupon-by-user-role-for-woocommerce' ),
 				'type'     => 'title',
@@ -73,8 +73,10 @@ class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
 				'desc'     => alg_wc_coupon_by_user_role()->core->get_select_all_buttons(),
 			),
 			array(
-				'desc_tip' => __( 'Exceptions.', 'coupon-by-user-role-for-woocommerce' ) . ' ' .
-					__( 'This is useful if user can have multiple roles at once on your site.', 'coupon-by-user-role-for-woocommerce' ),
+				'desc_tip' => (
+					__( 'Exceptions.', 'coupon-by-user-role-for-woocommerce' ) . ' ' .
+					__( 'This is useful if user can have multiple roles at once on your site.', 'coupon-by-user-role-for-woocommerce' )
+				),
 				'type'     => 'multiselect',
 				'class'    => 'chosen_select',
 				'default'  => array(),
@@ -93,8 +95,10 @@ class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
 				'desc'     => alg_wc_coupon_by_user_role()->core->get_select_all_buttons(),
 			),
 			array(
-				'desc_tip' => __( 'Exceptions.', 'coupon-by-user-role-for-woocommerce' ) . ' ' .
-					__( 'This is useful if user can have multiple roles at once on your site.', 'coupon-by-user-role-for-woocommerce' ),
+				'desc_tip' => (
+					__( 'Exceptions.', 'coupon-by-user-role-for-woocommerce' ) . ' ' .
+					__( 'This is useful if user can have multiple roles at once on your site.', 'coupon-by-user-role-for-woocommerce' )
+				),
 				'type'     => 'multiselect',
 				'class'    => 'chosen_select',
 				'default'  => array(),
@@ -137,10 +141,14 @@ class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
 			array(
 				'title'    => __( '"Coupon is not valid" message', 'coupon-by-user-role-for-woocommerce' ),
 				'desc_tip' => __( 'Message that will be displayed for invalid coupons by user role.', 'coupon-by-user-role-for-woocommerce' ),
-				'desc'     => sprintf( __( 'Available placeholders: %s.', 'coupon-by-user-role-for-woocommerce' ), '<code>' . implode( '</code>, <code>', array(
+				'desc'     => sprintf(
+					/* Translators: %s: Placeholder list. */
+					__( 'Available placeholders: %s.', 'coupon-by-user-role-for-woocommerce' ),
+					'<code>' . implode( '</code>, <code>', array(
 						'%coupon_code%',
 						'%coupon_amount%',
-					) ) . '</code>' ),
+					) ) . '</code>'
+				),
 				'type'     => 'textarea',
 				'default'  => __( 'Coupon is not valid for your user role.', 'coupon-by-user-role-for-woocommerce' ),
 				'id'       => 'wpjup_wc_coupon_by_user_role_invalid_message',
@@ -153,7 +161,13 @@ class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
 
 		$notes = $this->get_notes();
 
-		return array_merge( $plugin_settings, $all_coupons_settings, $per_coupon_settings, $message_settings, ( ! empty( $notes ) ? $notes : array() ) );
+		return array_merge(
+			$section_settings,
+			$all_coupons_settings,
+			$per_coupon_settings,
+			$message_settings,
+			( ! empty( $notes ) ? $notes : array() )
+		);
 	}
 
 }

@@ -1,9 +1,9 @@
 === Coupon by User Role for WooCommerce ===
-Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas, kousikmukherjeeli
-Tags: woocommerce, coupon, user role, woo commerce
+Contributors: wpcodefactory, algoritmika, anbinder, karzin, omardabbas
+Tags: woocommerce, coupon, user role, ecommerce
 Requires at least: 4.4
-Tested up to: 6.6
-Stable tag: 2.1.1
+Tested up to: 6.8
+Stable tag: 2.2.0
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,26 +16,26 @@ WooCommerce coupons by user roles.
 * **Disable** or **invalidate** selected (or all) **coupons** for selected user role(s).
 * Set **coupon amount** per user role.
 
-### &#9989; Coupon Availability by User Role ###
+### ✅ Coupon Availability by User Role ###
 
 **Disable all coupons for selected user roles** - This will disable all coupons for selected user roles. Coupons will be disabled completely, including coupon code input field on the cart and checkout pages.
 
 **Invalidate selected (or all) coupons for selected user roles** - This will invalidate selected (or all) coupons for selected user roles. Coupon code input field will still be available on the cart and checkout pages. In case if user with "wrong" user role will try to apply the coupon, plugin will display customizable "Coupon is not valid for your user role" message on frontend.
 
-### &#9989; Coupon Amount by User Role ###
+### ✅ Coupon Amount by User Role ###
 
 Sets **coupon amount** per user role.
 
-### &#127942; Premium Version ###
+### 🏆 Premium Version ###
 
 Free plugin version includes "standard" user roles only: Guest, Administrator, Editor, Author, Contributor, Subscriber, Customer, Shop manager. If you need all your site's custom user roles to be included, you'll need [Coupon by User Role for WooCommerce Pro](https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/) plugin version.
 
-### &#128472; Feedback ###
+### 🗘 Feedback ###
 
 * We are open to your suggestions and feedback. Thank you for using or trying out one of our plugins!
 * [Visit plugin site](https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/).
 
-### &#8505; More ###
+### ℹ More ###
 
 * The plugin is **"High-Performance Order Storage (HPOS)"** compatible.
 
@@ -43,9 +43,22 @@ Free plugin version includes "standard" user roles only: Guest, Administrator, E
 
 1. Upload the entire plugin folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin through the "Plugins" menu in WordPress.
-3. Start by visiting plugin settings at "WooCommerce > Settings > Coupon by User Role".
+3. Start by visiting plugin settings at "WPFactory > Coupon by User Role".
 
 == Changelog ==
+
+= 2.2.0 - 25/06/2025 =
+* Fix - Translation loading fixed.
+* Dev - Security - Output escaped.
+* Dev - Security - Input sanitized.
+* Dev - Security - Nonces added.
+* Dev - Plugin settings moved to the "WPFactory" menu.
+* Dev - WPFactory "Recommendations" added.
+* Dev - WPFactory "Key Manager" added.
+* Dev - Code refactoring.
+* Dev - Coding standards improved.
+* WC tested up to: 9.9.
+* Tested up to: 6.8.
 
 = 2.1.1 - 30/07/2024 =
 * WC tested up to: 9.1.

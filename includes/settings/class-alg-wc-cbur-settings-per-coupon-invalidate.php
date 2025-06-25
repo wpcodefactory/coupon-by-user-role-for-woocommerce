@@ -21,11 +21,15 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Invalidate extends Alg_WC_CBUR_Settings_Pe
 	 * @since   2.0.0
 	 */
 	function __construct() {
+
 		$this->id    = 'alg_wc_coupon_by_user_role_invalidate';
 		$this->title = __( 'Invalidate by user role', 'coupon-by-user-role-for-woocommerce' );
 		$this->icon  = 'e038';
+
 		parent::__construct();
+
 		add_action( 'admin_footer', array( $this, 'select_all_button_script' ) );
+
 	}
 
 	/**
@@ -57,8 +61,10 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Invalidate extends Alg_WC_CBUR_Settings_Pe
 				'type'       => 'select',
 				'multiple'   => true,
 				'options'    => alg_wc_coupon_by_user_role()->core->get_user_roles_options(),
-				'desc'       => alg_wc_coupon_by_user_role()->core->get_select_all_buttons( 'margin-top: 3px;' ) .
-					wc_help_tip( __( 'Invalidate coupon for selected user roles.', 'coupon-by-user-role-for-woocommerce' ) ),
+				'desc'       => (
+					alg_wc_coupon_by_user_role()->core->get_select_all_buttons( 'margin-top: 3px;' ) .
+					wc_help_tip( __( 'Invalidate coupon for selected user roles.', 'coupon-by-user-role-for-woocommerce' ) )
+				),
 			),
 			array(
 				'label'      => __( 'Exceptions', 'coupon-by-user-role-for-woocommerce' ),
@@ -67,8 +73,10 @@ class Alg_WC_CBUR_Settings_Per_Coupon_Invalidate extends Alg_WC_CBUR_Settings_Pe
 				'type'       => 'select',
 				'multiple'   => true,
 				'options'    => alg_wc_coupon_by_user_role()->core->get_user_roles_options(),
-				'desc'       => alg_wc_coupon_by_user_role()->core->get_select_all_buttons( 'margin-top: 3px;' ) .
-					wc_help_tip( __( 'This is useful if user can have multiple roles at once on your site.', 'coupon-by-user-role-for-woocommerce' ) ),
+				'desc'       => (
+					alg_wc_coupon_by_user_role()->core->get_select_all_buttons( 'margin-top: 3px;' ) .
+					wc_help_tip( __( 'This is useful if user can have multiple roles at once on your site.', 'coupon-by-user-role-for-woocommerce' ) )
+				),
 			),
 		);
 	}
