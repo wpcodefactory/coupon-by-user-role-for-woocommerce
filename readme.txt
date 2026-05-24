@@ -2,8 +2,8 @@
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: woocommerce, coupon, user role, ecommerce
 Requires at least: 4.4
-Tested up to: 6.8
-Stable tag: 2.2.1
+Tested up to: 7.0
+Stable tag: 2.2.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,10 @@ Free plugin version includes "standard" user roles only: Guest, Administrator, E
 3. Start by visiting plugin settings at "WPFactory > Coupon by User Role".
 
 == Changelog ==
+
+= 2.2.2 - 24/05/2026 =
+* Tested up to: 7.0.
+* WC tested up to: 10.7.
 
 = 2.2.1 - 03/09/2025 =
 * WC tested up to: 10.1.
