@@ -2,259 +2,288 @@
 /**
  * Coupon by User Role for WooCommerce - Per Coupon Settings
  *
- * @version 2.2.0
+ * @version 2.3.0
  * @since   1.1.0
  *
- * @author  Algoritmika Ltd.
+ * @author WPFactory
+ *
+ * @package WPFactory\WC_Coupon_By_User_Role\Settings
  */
 
 defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Alg_WC_CBUR_Settings_Per_Coupon' ) ) :
 
-class Alg_WC_CBUR_Settings_Per_Coupon {
-
 	/**
-	 * id.
+	 * Alg_WC_CBUR_Settings_Per_Coupon class.
 	 *
-	 * @since 2.1.0
-	 */
-	public $id;
-
-	/**
-	 * title.
-	 *
-	 * @since 2.1.0
-	 */
-	public $title;
-
-	/**
-	 * icon.
-	 *
-	 * @since 2.1.0
-	 */
-	public $icon;
-
-	/**
-	 * Constructor.
-	 *
-	 * @version 2.0.0
+	 * @version 2.3.0
 	 * @since   1.1.0
 	 */
-	function __construct() {
-		add_action( 'woocommerce_coupon_data_tabs',    array( $this, 'add_tab' ), 10 );
-		add_action( 'woocommerce_coupon_data_panels',  array( $this, 'add_options' ), 10, 2 );
-		add_action( 'woocommerce_coupon_options_save', array( $this, 'save_options' ), 10, 2 );
-		add_action( 'admin_head',                      array( $this, 'icon_css' ) );
-	}
+	class Alg_WC_CBUR_Settings_Per_Coupon {
 
-	/**
-	 * is_coupon_admin_add_edit_page.
-	 *
-	 * @version 2.0.0
-	 * @since   2.0.0
-	 */
-	function is_coupon_admin_add_edit_page() {
-		global $pagenow;
-		return (
-			in_array(
-				$pagenow,
-				array( 'post.php', 'post-new.php' )
-			) &&
-			'shop_coupon' === get_post_type()
-		);
-	}
+		/**
+		 * ID.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @var string
+		 */
+		public $id;
 
-	/**
-	 * icon_css.
-	 *
-	 * @version 2.2.0
-	 * @since   2.0.0
-	 *
-	 * @see     https://rawgit.com/woothemes/woocommerce-icons/master/demo.html
-	 *
-	 * @todo    (dev) better icons?
-	 */
-	function icon_css( $tabs ) {
-		if ( $this->is_coupon_admin_add_edit_page() ) {
-			?>
-			<style>
-				.<?php echo esc_html( $this->id ); ?>_options a::before {
-					font-family: "WooCommerce" !important;
-					content: "\<?php echo esc_html( $this->icon ); ?>" !important;
-				}
-			</style>
-			<?php
+		/**
+		 * Title.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @var string
+		 */
+		public $title;
+
+		/**
+		 * Icon.
+		 *
+		 * @since 2.1.0
+		 *
+		 * @var string
+		 */
+		public $icon;
+
+		/**
+		 * Constructor.
+		 *
+		 * @version 2.3.0
+		 * @since   1.1.0
+		 */
+		public function __construct() {
+			add_action( 'woocommerce_coupon_data_tabs', array( $this, 'add_tab' ), 10 );
+			add_action( 'woocommerce_coupon_data_panels', array( $this, 'add_options' ), 10, 2 );
+			add_action( 'woocommerce_coupon_options_save', array( $this, 'save_options' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'icon_css' ) );
 		}
-	}
 
-	/**
-	 * add_tab.
-	 *
-	 * @version 2.0.0
-	 * @since   2.0.0
-	 *
-	 * @see     https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L45
-	 */
-	function add_tab( $tabs ) {
-		$tabs[ $this->id ] = array(
-			'label'  => $this->title,
-			'target' => $this->id . '_coupon_data',
-			'class'  => $this->id . '_coupon_data',
-		);
-		return $tabs;
-	}
+		/**
+		 * Is coupon admin add/edit page.
+		 *
+		 * @version 2.3.0
+		 * @since   2.0.0
+		 */
+		public function is_coupon_admin_add_edit_page() {
+			global $pagenow;
+			return (
+				in_array(
+					$pagenow,
+					array( 'post.php', 'post-new.php' ),
+					true
+				) &&
+				'shop_coupon' === get_post_type()
+			);
+		}
 
-	/**
-	 * add_options.
-	 *
-	 * @version 2.2.0
-	 * @since   2.0.0
-	 *
-	 * @see     https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L344
-	 * @see     https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/wc-meta-box-functions.php
-	 *
-	 * @todo    (dev) `woocommerce_wp_text_input()`: `placeholder`, `description`, `desc_tip`
-	 * @todo    (dev) `woocommerce_wp_select()`: select all: better design?
-	 * @todo    (dev) Pro msg: better styling?
-	 */
-	function add_options( $coupon_id, $coupon ) {
+		/**
+		 * Icon CSS.
+		 *
+		 * @version 2.3.0
+		 * @since   2.0.0
+		 *
+		 * @see https://rawgit.com/woothemes/woocommerce-icons/master/demo.html
+		 *
+		 * @todo (dev) Better icons?
+		 */
+		public function icon_css() {
+			if ( ! $this->is_coupon_admin_add_edit_page() ) {
+				return;
+			}
 
-		echo '<div id="' . esc_html( $this->id ) . '_coupon_data" class="panel woocommerce_options_panel">' .
-			'<div class="options_group">';
+			wp_register_style(
+				$this->id,
+				false,
+				array(),
+				ALG_WC_COUPON_BY_USER_ROLE_VERSION
+			);
 
-		foreach ( $this->get_options() as $option ) {
+			wp_enqueue_style( $this->id );
 
-			$value = get_post_meta( $coupon_id, '_' . $option['name'], true );
+			wp_add_inline_style(
+				$this->id,
+				'.' . esc_attr( $this->id ) . '_options a::before {
+					font-family: "WooCommerce" !important;
+					content: "\\' . esc_attr( $this->icon ) . '" !important;
+				}'
+			);
+		}
 
-			switch ( $option['type'] ) {
+		/**
+		 * Add tab.
+		 *
+		 * @version 2.0.0
+		 * @since   2.0.0
+		 *
+		 * @param array $tabs Array of existing coupon data tabs.
+		 *
+		 * @return array Modified array of coupon data tabs.
+		 *
+		 * @see https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L45
+		 */
+		public function add_tab( $tabs ) {
+			$tabs[ $this->id ] = array(
+				'label'  => $this->title,
+				'target' => $this->id . '_coupon_data',
+				'class'  => $this->id . '_coupon_data',
+			);
+			return $tabs;
+		}
 
-				case 'text':
-					woocommerce_wp_text_input(
-						array(
-							'label'             => $option['label'],
-							'id'                => $option['name'] . (
-								isset( $option['key'] ) ?
-								'_' . $option['key'] :
-								''
-							),
-							'name'              => $option['name'] . (
-								isset( $option['key'] ) ?
-								'[' . $option['key'] . ']' :
-								''
-							),
-							'data_type'         => (
-								'percent' === $coupon->get_discount_type( 'edit' ) ?
-								'decimal' :
-								'price'
-							),
-							'description'       => ( $option['desc'] ?? '' ),
-							'desc_tip'          => true,
-							'value'             => (
-								isset( $option['key'] ) ?
-								(
-									isset( $value[ $option['key'] ] ) ?
-									$value[ $option['key'] ] :
-									$option['default']
-								) :
-								(
+		/**
+		 * Add options.
+		 *
+		 * @version 2.3.0
+		 * @since   2.0.0
+		 *
+		 * @param int    $coupon_id Coupon ID.
+		 * @param object $coupon    WC_Coupon object.
+		 *
+		 * @return void
+		 *
+		 * @see https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L344
+		 * @see https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/wc-meta-box-functions.php
+		 *
+		 * @todo (dev) `woocommerce_wp_text_input()`: `placeholder`, `description`, `desc_tip`.
+		 * @todo (dev) `woocommerce_wp_select()`: Select all: Better design?
+		 * @todo (dev) Pro msg: Better styling?
+		 */
+		public function add_options( $coupon_id, $coupon ) {
+			echo '<div id="' . esc_attr( $this->id ) . '_coupon_data" class="panel woocommerce_options_panel"><div class="options_group">';
+
+			foreach ( $this->get_options() as $option ) {
+				$value = get_post_meta( $coupon_id, '_' . $option['name'], true );
+
+				switch ( $option['type'] ) {
+					case 'text':
+						woocommerce_wp_text_input(
+							array(
+								'label'       => $option['label'],
+								'id'          => $option['name'] . (
+									isset( $option['key'] ) ?
+									'_' . $option['key'] :
+									''
+								),
+								'name'        => $option['name'] . (
+									isset( $option['key'] ) ?
+									'[' . $option['key'] . ']' :
+									''
+								),
+								'data_type'   => (
+									'percent' === $coupon->get_discount_type( 'edit' ) ?
+									'decimal' :
+									'price'
+								),
+								'description' => ( $option['desc'] ?? '' ),
+								'desc_tip'    => true,
+								'value'       => (
+									isset( $option['key'] ) ?
+									(
+										isset( $value[ $option['key'] ] ) ?
+										$value[ $option['key'] ] :
+										$option['default']
+									) :
+									(
+										'' !== $value ?
+										$value :
+										$option['default']
+									)
+								),
+							)
+						);
+						break;
+
+					case 'select':
+						woocommerce_wp_select(
+							array(
+								'label'             => $option['label'],
+								'id'                => $option['name'],
+								'name'              => $option['name'] . (
+									! empty( $option['multiple'] ) ?
+									'[]' :
+									''
+								),
+								'class'             => 'chosen_select short',
+								'options'           => $option['options'],
+								'custom_attributes' => (
+									! empty( $option['multiple'] ) ?
+									array( 'multiple' => 'multiple' ) :
+									array()
+								),
+								'description'       => ( $option['desc'] ?? '' ),
+								'value'             => (
 									'' !== $value ?
 									$value :
 									$option['default']
-								)
-							),
-						)
-					);
-					break;
+								),
+							)
+						);
+						break;
+				}
+			}
 
-				case 'select':
-					woocommerce_wp_select(
-						array(
-							'label'             => $option['label'],
-							'id'                => $option['name'],
-							'name'              => $option['name'] . (
-								! empty( $option['multiple'] ) ?
-								'[]' :
-								''
-							),
-							'class'             => 'chosen_select short',
-							'options'           => $option['options'],
-							'custom_attributes' => (
-								! empty( $option['multiple'] ) ?
-								array( 'multiple' => 'multiple' ) :
-								array()
-							),
-							'description'       => ( $option['desc'] ?? '' ),
-							'value'             => (
-								'' !== $value ?
-								$value :
-								$option['default']
-							),
-						)
-					);
-					break;
+			echo wp_kses_post(
+				apply_filters(
+					'alg_wc_cbur_settings',
+					alg_wc_coupon_by_user_role()->core->get_pro_msg()
+				)
+			);
 
+			echo '</div></div>';
+
+			wp_nonce_field(
+				'save_options',
+				"_wpnonce_alg_wc_coupon_by_user_role_{$this->id}"
+			);
+		}
+
+		/**
+		 * Save options.
+		 *
+		 * @version 2.3.0
+		 * @since   2.0.0
+		 *
+		 * @param int $coupon_id Coupon ID.
+		 *
+		 * @return void
+		 *
+		 * @see https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L391
+		 */
+		public function save_options( $coupon_id ) {
+			if ( ! isset( $_POST[ "_wpnonce_alg_wc_coupon_by_user_role_{$this->id}" ] ) ) {
+				return;
+			}
+
+			if (
+				! wp_verify_nonce(
+					sanitize_text_field(
+						wp_unslash(
+							$_POST[ "_wpnonce_alg_wc_coupon_by_user_role_{$this->id}" ]
+						)
+					),
+					'save_options'
+				)
+			) {
+				wp_die( esc_html__( 'Link expired.', 'coupon-by-user-role-for-woocommerce' ) );
+			}
+
+			$saved_options = array();
+			foreach ( $this->get_options() as $option ) {
+				if ( ! in_array( $option['name'], $saved_options, true ) ) {
+					$value = (
+						isset( $_POST[ $option['name'] ] ) ?
+						wc_clean( wp_unslash( $_POST[ $option['name'] ] ) ) : // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+						$option['default']
+					);
+					update_post_meta( $coupon_id, '_' . $option['name'], $value );
+					$saved_options[] = $option['name'];
+				}
 			}
 		}
-
-		echo wp_kses_post(
-			apply_filters(
-				'alg_wc_cbur_settings',
-				alg_wc_coupon_by_user_role()->core->get_pro_msg()
-			)
-		);
-
-		echo '</div>' . '</div>';
-
-		wp_nonce_field(
-			'save_options',
-			"_wpnonce_alg_wc_coupon_by_user_role_{$this->id}"
-		);
-
 	}
-
-	/**
-	 * save_options.
-	 *
-	 * @version 2.2.0
-	 * @since   2.0.0
-	 *
-	 * @see     https://github.com/woocommerce/woocommerce/blob/5.6.0/includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php#L391
-	 */
-	function save_options( $coupon_id, $coupon ) {
-
-		if ( ! isset( $_POST[ "_wpnonce_alg_wc_coupon_by_user_role_{$this->id}" ] ) ) {
-			return;
-		}
-
-		if (
-			! wp_verify_nonce(
-				sanitize_text_field(
-					wp_unslash(
-						$_POST[ "_wpnonce_alg_wc_coupon_by_user_role_{$this->id}" ]
-					)
-				),
-				'save_options'
-			)
-		) {
-			wp_die( esc_html__( 'Link expired.', 'coupon-by-user-role-for-woocommerce' ) );
-		}
-
-		$saved_options = array();
-		foreach ( $this->get_options() as $option ) {
-			if ( ! in_array( $option['name'], $saved_options ) ) {
-				$value = (
-					isset( $_POST[ $option['name'] ] ) ?
-					wc_clean( wp_unslash( $_POST[ $option['name'] ] ) ) : // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
-					$option['default']
-				);
-				update_post_meta( $coupon_id, '_' . $option['name'], $value );
-				$saved_options[] = $option['name'];
-			}
-		}
-
-	}
-
-}
 
 endif;
