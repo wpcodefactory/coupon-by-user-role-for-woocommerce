@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Amounts Section Settings
  *
- * @version 2.0.0
+ * @version 2.3.1
  * @since   2.0.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Amounts' ) ) :
 	/**
 	 * Alg_WC_CBUR_Settings_Amounts class.
 	 *
-	 * @version 2.0.0
+	 * @version 2.3.1
 	 * @since   2.0.0
 	 */
 	class Alg_WC_CBUR_Settings_Amounts extends Alg_WC_CBUR_Settings_Section {
@@ -37,7 +37,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Amounts' ) ) :
 		/**
 		 * Get settings.
 		 *
-		 * @version 2.0.0
+		 * @version 2.3.1
 		 * @since   2.0.0
 		 *
 		 * @todo (feature) "Amount" (i.e., globally, not per-coupon).
@@ -83,12 +83,9 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Amounts' ) ) :
 				),
 			);
 
-			$notes = $this->get_notes();
-
 			return array_merge(
 				$section_settings,
-				$amount_per_coupon_settings,
-				( ! empty( $notes ) ? $notes : array() )
+				$amount_per_coupon_settings
 			);
 		}
 	}

@@ -1,10 +1,10 @@
 === Coupon by User Role for WooCommerce ===
 Contributors: wpcodefactory, anbinder, karzin, omardabbas
 Tags: woocommerce, coupon, user role, ecommerce
-Requires at least: 4.5
+Requires at least: 4.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3.0
+Stable tag: 2.3.1
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -27,10 +27,6 @@ WooCommerce coupons by user roles.
 
 Sets **coupon amount** per user role.
 
-### 🏆 Premium Version ###
-
-Free plugin version includes "standard" user roles only: Guest, Administrator, Editor, Author, Contributor, Subscriber, Customer, Shop manager. If you need all your site's custom user roles to be included, you'll need [Coupon by User Role for WooCommerce Pro](https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/) plugin version.
-
 ### 🗘 Feedback ###
 
 * We are open to your suggestions and feedback. Thank you for using or trying out one of our plugins!
@@ -47,6 +43,10 @@ Free plugin version includes "standard" user roles only: Guest, Administrator, E
 3. Start by visiting plugin settings at "WPFactory > Coupon by User Role".
 
 == Changelog ==
+
+= 2.3.1 - 28/10/2026 =
+* Dev - The free plugin version can now handle all user roles (including custom).
+* Requires at least: 4.6.
 
 = 2.3.0 - 19/10/2026 =
 * Dev - Code refactoring.

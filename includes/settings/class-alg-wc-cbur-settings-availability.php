@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Availability Section Settings
  *
- * @version 2.0.0
+ * @version 2.3.1
  * @since   1.0.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Availability' ) ) :
 	/**
 	 * Alg_WC_CBUR_Settings_Availability class.
 	 *
-	 * @version 2.0.0
+	 * @version 2.3.1
 	 * @since   1.0.0
 	 */
 	class Alg_WC_CBUR_Settings_Availability extends Alg_WC_CBUR_Settings_Section {
@@ -37,7 +37,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Availability' ) ) :
 		/**
 		 * Get settings.
 		 *
-		 * @version 2.0.0
+		 * @version 2.3.1
 		 * @since   1.0.0
 		 *
 		 * @todo (dev) Rearrange settings, e.g., "All Coupons: Disable", "All Coupons: Invalidate".
@@ -169,14 +169,11 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Availability' ) ) :
 				),
 			);
 
-			$notes = $this->get_notes();
-
 			return array_merge(
 				$section_settings,
 				$all_coupons_settings,
 				$per_coupon_settings,
-				$message_settings,
-				( ! empty( $notes ) ? $notes : array() )
+				$message_settings
 			);
 		}
 	}

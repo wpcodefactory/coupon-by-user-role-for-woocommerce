@@ -3,10 +3,10 @@
  * Plugin Name: Coupon by User Role for WooCommerce
  * Plugin URI: https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/
  * Description: WooCommerce coupons by user roles.
- * Version: 2.3.0
+ * Version: 2.3.1
  * Author: WPFactory
  * Author URI: https://wpfactory.com
- * Requires at least: 4.5
+ * Requires at least: 4.6
  * Requires PHP: 7.4
  * Text Domain: coupon-by-user-role-for-woocommerce
  * Domain Path: /langs
@@ -49,7 +49,7 @@ if ( 'coupon-by-user-role-for-woocommerce.php' === basename( __FILE__ ) ) {
 /**
  * Plugin version.
  */
-defined( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION' ) || define( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION', '2.3.0' );
+defined( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION' ) || define( 'ALG_WC_COUPON_BY_USER_ROLE_VERSION', '2.3.1' );
 
 /**
  * Plugin file.

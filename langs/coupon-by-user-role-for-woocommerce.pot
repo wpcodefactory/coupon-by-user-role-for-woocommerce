@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: Coupon by User Role for WooCommerce 2.3.0\n"
+"Project-Id-Version: Coupon by User Role for WooCommerce 2.3.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/coupon-by-user-role-for-woocommerce\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-19T12:26:06+00:00\n"
+"POT-Creation-Date: 2026-10-28T19:27:44+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: coupon-by-user-role-for-woocommerce\n"
@@ -47,40 +47,11 @@ msgstr ""
 msgid "Deselect all"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:352
-#: includes/pro/class-alg-wc-coupon-by-user-role-pro.php:93
+#: includes/class-alg-wc-coupon-by-user-role-core.php:363
 msgid "Guest"
 msgstr ""
 
-#: includes/class-alg-wc-coupon-by-user-role-core.php:353
-msgid "Administrator"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:354
-msgid "Editor"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:355
-msgid "Author"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:356
-msgid "Contributor"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:357
-msgid "Subscriber"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:358
-msgid "Customer"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:359
-msgid "Shop manager"
-msgstr ""
-
-#: includes/class-alg-wc-coupon-by-user-role-core.php:504
+#: includes/class-alg-wc-coupon-by-user-role-core.php:510
 #: includes/settings/class-alg-wc-cbur-settings-availability.php:163
 msgid "Coupon is not valid for your user role."
 msgstr ""
@@ -230,7 +201,7 @@ msgstr ""
 msgid "Exceptions"
 msgstr ""
 
-#: includes/settings/class-alg-wc-cbur-settings-per-coupon.php:271
+#: includes/settings/class-alg-wc-cbur-settings-per-coupon.php:264
 msgid "Link expired."
 msgstr ""
 

@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Section Settings
  *
- * @version 2.1.0
+ * @version 2.3.1
  * @since   1.0.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Section' ) ) :
 	/**
 	 * Alg_WC_CBUR_Settings_Section class.
 	 *
-	 * @version 2.1.0
+	 * @version 2.3.1
 	 * @since   1.0.0
 	 */
 	class Alg_WC_CBUR_Settings_Section {
@@ -71,30 +71,6 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Section' ) ) :
 		public function settings_section( $sections ) {
 			$sections[ $this->id ] = $this->desc;
 			return $sections;
-		}
-
-		/**
-		 * Get notes.
-		 *
-		 * @version 2.0.0
-		 * @since   2.0.0
-		 */
-		public function get_notes() {
-			return apply_filters(
-				'alg_wc_cbur_settings',
-				array(
-					array(
-						'title' => '',
-						'type'  => 'title',
-						'id'    => 'alg_wc_coupon_by_user_role_notes',
-						'desc'  => alg_wc_coupon_by_user_role()->core->get_pro_msg(),
-					),
-					array(
-						'type' => 'sectionend',
-						'id'   => 'alg_wc_coupon_by_user_role_notes',
-					),
-				)
-			);
 		}
 	}
 

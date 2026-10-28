@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Core Class
  *
- * @version 2.3.0
+ * @version 2.3.1
  * @since   1.0.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_Coupon_By_User_Role_Core' ) ) :
 	/**
 	 * Alg_WC_Coupon_By_User_Role_Core class.
 	 *
-	 * @version 2.3.0
+	 * @version 2.3.1
 	 * @since   1.0.0
 	 */
 	class Alg_WC_Coupon_By_User_Role_Core {
@@ -340,25 +340,31 @@ if ( ! class_exists( 'Alg_WC_Coupon_By_User_Role_Core' ) ) :
 		/**
 		 * Get user roles options.
 		 *
-		 * @version 1.3.0
+		 * @version 2.3.1
 		 * @since   1.0.0
 		 *
 		 * @todo (dev) `super_admin` (Super Admin).
 		 */
 		public function get_user_roles_options() {
-			return apply_filters(
-				'alg_wc_cbur_user_roles',
-				array(
-					'guest'         => __( 'Guest', 'coupon-by-user-role-for-woocommerce' ),
-					'administrator' => __( 'Administrator', 'coupon-by-user-role-for-woocommerce' ),
-					'editor'        => __( 'Editor', 'coupon-by-user-role-for-woocommerce' ),
-					'author'        => __( 'Author', 'coupon-by-user-role-for-woocommerce' ),
-					'contributor'   => __( 'Contributor', 'coupon-by-user-role-for-woocommerce' ),
-					'subscriber'    => __( 'Subscriber', 'coupon-by-user-role-for-woocommerce' ),
-					'customer'      => __( 'Customer', 'coupon-by-user-role-for-woocommerce' ),
-					'shop_manager'  => __( 'Shop manager', 'coupon-by-user-role-for-woocommerce' ),
+			global $wp_roles;
+
+			$roles = apply_filters(
+				'editable_roles', // phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedHooknameFound
+				(
+					isset( $wp_roles ) && is_object( $wp_roles ) ?
+					$wp_roles->roles :
+					array()
 				)
 			);
+
+			$roles = wp_list_pluck( $roles, 'name' );
+
+			$roles = array_merge(
+				array( 'guest' => __( 'Guest', 'coupon-by-user-role-for-woocommerce' ) ),
+				$roles
+			);
+
+			return $roles;
 		}
 
 		/**
@@ -515,37 +521,6 @@ if ( ! class_exists( 'Alg_WC_Coupon_By_User_Role_Core' ) ) :
 					$placeholders,
 					$template
 				)
-			);
-		}
-
-		/**
-		 * Get pro message.
-		 *
-		 * @version 2.0.0
-		 * @since   2.0.0
-		 *
-		 * @return string The pro message.
-		 */
-		public function get_pro_msg() {
-			return (
-				'<p style="background-color:white;padding:10px;">' .
-					'<span class="dashicons dashicons-info" style="color:red;"></span> ' .
-					sprintf(
-						'This plugin version includes "standard" user roles only: %s.',
-						'<strong>' .
-							implode(
-								'</strong>, <strong>',
-								alg_wc_coupon_by_user_role()->core->get_user_roles_options()
-							) .
-						'</strong>'
-					) . ' ' .
-					sprintf(
-						'If you need all your site\'s custom user roles to be included, you\'ll need %s plugin version.',
-						'<a target="_blank" href="https://wpfactory.com/item/coupon-by-user-role-for-woocommerce/">' .
-							'Coupon by User Role for WooCommerce Pro' .
-						'</a>'
-					) .
-				'</p>'
 			);
 		}
 	}

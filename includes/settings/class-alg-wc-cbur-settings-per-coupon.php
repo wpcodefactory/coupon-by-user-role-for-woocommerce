@@ -2,7 +2,7 @@
 /**
  * Coupon by User Role for WooCommerce - Per Coupon Settings
  *
- * @version 2.3.0
+ * @version 2.3.1
  * @since   1.1.0
  *
  * @author WPFactory
@@ -17,7 +17,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Per_Coupon' ) ) :
 	/**
 	 * Alg_WC_CBUR_Settings_Per_Coupon class.
 	 *
-	 * @version 2.3.0
+	 * @version 2.3.1
 	 * @since   1.1.0
 	 */
 	class Alg_WC_CBUR_Settings_Per_Coupon {
@@ -137,7 +137,7 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Per_Coupon' ) ) :
 		/**
 		 * Add options.
 		 *
-		 * @version 2.3.0
+		 * @version 2.3.1
 		 * @since   2.0.0
 		 *
 		 * @param int    $coupon_id Coupon ID.
@@ -225,13 +225,6 @@ if ( ! class_exists( 'Alg_WC_CBUR_Settings_Per_Coupon' ) ) :
 						break;
 				}
 			}
-
-			echo wp_kses_post(
-				apply_filters(
-					'alg_wc_cbur_settings',
-					alg_wc_coupon_by_user_role()->core->get_pro_msg()
-				)
-			);
 
 			echo '</div></div>';
 
