@@ -4,7 +4,7 @@ Tags: woocommerce, coupon, user role, ecommerce
 Requires at least: 4.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.3.1
+Stable tag: 2.3.2
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -43,6 +43,9 @@ Sets **coupon amount** per user role.
 3. Start by visiting plugin settings at "WPFactory > Coupon by User Role".
 
 == Changelog ==
+
+= 2.3.2 - 23/11/2026 =
+* WC tested up to: 11.3.
 
 = 2.3.1 - 28/10/2026 =
 * Dev - The free plugin version can now handle all user roles (including custom).
